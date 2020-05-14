@@ -1,7 +1,9 @@
-        var jogador=prompt("Digite a opção: " + "\n" + "Pedra | Papel | Tesoura");
+        var jogador=prompt("Digite a opção: " + "\n" + "Pedra - Papel - Tesoura");
         
 
-        if ((jogador != "Pedra") && (jogador != "Papel") && (jogador != "Tesoura"))
+        if ((jogador != "Pedra") && (jogador != "Papel") && (jogador != "Tesoura")
+	&& (jogador != "PEDRA") && (jogador != "PAPEL") && (jogador != "TESOURA")
+	&& (jogador != "pedra") && (jogador != "papel") && (jogador != "tesoura"))
             {
             alert("OPÇÃO INVÁLIDA");
             }else {
