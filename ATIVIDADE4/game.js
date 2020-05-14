@@ -1,9 +1,9 @@
-        var jogador=prompt("Digite a opção: " + "\n" + "Pedra - Papel - Tesoura");
+        var jogador=prompt("Digite a opção: " + "\n" + "Pedra | Papel | Tesoura");
         
 
         if ((jogador != "Pedra") && (jogador != "Papel") && (jogador != "Tesoura")
-	&& (jogador != "PEDRA") && (jogador != "PAPEL") && (jogador != "TESOURA")
-	&& (jogador != "pedra") && (jogador != "papel") && (jogador != "tesoura"))
+			&& (jogador != "PEDRA") && (jogador != "PAPEL") && (jogador != "TESOURA")
+			&& (jogador != "pedra") && (jogador != "papel") && (jogador != "tesoura"))
             {
             alert("OPÇÃO INVÁLIDA");
             }else {
@@ -14,28 +14,28 @@
     
         var resultado = Math.floor(Math.random() * 3);
 
-        if(jogador == "Pedra" && resultado == 0){
+        if(jogador == "Pedra" || jogador == "PEDRA" || jogador == "pedra" && resultado == 0){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Empate");
-        }else if (jogador == "Papel" && resultado == 0){
+        }else if (jogador == "Papel" || jogador == "PAPEL" || jogador == "papel" && resultado == 0){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Papel cobriu Pedra");
-        }else if (jogador == "Tesoura" && resultado == 0){
+        }else if (jogador == "Tesoura" || jogador == "TESOURA" || jogador == "tesoura" && resultado == 0){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Pedra quebrou tesoura");
         }
             
         
-        if(jogador == "Pedra" && resultado == 1){
+        if(jogador == "Pedra" || jogador == "PEDRA" || jogador == "pedra" && resultado == 1){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Papel cobriu Pedra");
-        }else if (jogador == "Papel" && resultado == 1){
+        }else if (jogador == "Papel" || jogador == "PAPEL" || jogador == "papel" && resultado == 1){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Empate");
-        }else if (jogador == "Tesoura" && resultado == 1){
+        }else if (jogador == "Tesoura" || jogador == "TESOURA" || jogador == "tesoura" && resultado == 1){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Tesoura cortou papel");
         }
 
-        if(jogador == "Pedra" && resultado == 2){
+        if(jogador == "Pedra" || jogador == "PEDRA" || jogador == "pedra" == 2){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Pedra quebrou tesoura");
-        }else if (jogador == "Papel" && resultado == 2){
+        }else if (jogador == "Papel" || jogador == "PAPEL" || jogador == "papel" && resultado == 2){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Tesoura cortou papel");
-        }else if (jogador == "Tesoura" && resultado == 2){
+        }else if (jogador == "Tesoura" || jogador == "TESOURA" || jogador == "tesoura" && resultado == 2){
             alert("Você é " + jogador + "\n" + "RESULTADO: " + "Empate");
         }
     }
