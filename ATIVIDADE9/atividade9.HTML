@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Mudar de texto pra CAPSLOCK</h3>
+
+<input type="text" id="myText" value="Digite aqui...">
+
+<p>Transforma o texto em CAPSLOCK</p>
+
+<button onclick="myFunction()">Mudar</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    
+  var x = document.getElementById("myText").value;
+  var x = x.toUpperCase();
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
