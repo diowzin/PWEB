@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form name="formulario">
+
+    <legend>FORMULÁRIO PRINCIPAL:</legend>
+    <label for="fname">NOME:</label>
+	<br>
+	<br>
+    <input type="text" id="name" name="name">
+	<br>
+	<br>
+    <label for="email">EMAIL:</label><br>
+    <input type="email" id="email" name="email">
+	<br>
+	<br>
+    <label for="comment">Comentário:</label>
+	<br>
+	<br>
+    <textarea name="comment" form="formulario" id="comment">ESCREVA</textarea>
+	<br>
+    <br>
+    <h3>PESQUISA</h3>
+    <label for="checkbox">PRIMEIRA VEZ NESSA PÁGINA?</label>
+	<br>
+	<br>
+    <input type="radio" id="rdb1" name="rdb1" onclick="desmarcar2()">SIM
+    <input type="radio" id="rdb2" name="rdb2" onclick="desmarcar1()">NÃO
+	<br>
+	<br>
+    <input type="submit" value="Enviar" onclick="validar()">
+    <input type="submit" value="Limpar" onclick="limpar()">
+
+</form>
+
+
+
+<script>
+  document.getElementById('rdb1').checked = true;
+  
+   function limpar(){
+    document.formulario.elements[1].value = '';
+    document.formulario.elements[2].value = '';
+    document.getElementById('comment').value = 'ESCREVA';
+    document.getElementById('rdb1').checked = true;
+  }
+  
+
+
+  function desmarcar1(){
+    document.getElementById('rdb1').checked = false;
+  }
+
+  function desmarcar2(){
+    document.getElementById('rdb2').checked = false;
+  }
+
+
+  function validar() {
+      var name = document.formulario.elements[1].value;
+      var email = document.formulario.elements[2].value;
+      var comentario = document.getElementById('comment').value;
+      if (name.length < 10){
+        alert("NOME INVALIDO!");
+        return;
+      }
+      if (!email.includes("@", 0) && !email.includes('.', 0)){
+        alert('EMAIL INVALIDO!');
+        return;
+      }
+      if (comentario.length < 20){
+        alert('COMENTARIO INVALIDO!');
+        return;
+      }
+
+      if(document.getElementById('rdb1').checked == true){
+        alert('AGRADECEMOS O RETORNO!');
+      }else{
+        alert('VOLTE SEMPRE!!');
+      }
+  }
+
+</script>
+</body>
+</html>
